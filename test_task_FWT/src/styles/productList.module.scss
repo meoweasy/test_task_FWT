@@ -1,0 +1,259 @@
+@import './main.module.scss';
+
+[data-theme='dark'] {
+  .card_desc{
+    background-color: $primary-black;
+  }
+  .border_left{
+    border-left: 2px solid $accent-gold;
+  }
+  .title_name_card, .title_author_card{
+    color: $primary-white;
+  }
+  .title_year_card, .title_local_card{
+    color: $accent-gold;
+  }
+  .placeholder_title{
+    color: $primary-light-gray;
+  }
+  body{
+    background-color: $primary-black;
+  }
+}
+
+[data-theme='light'] {
+  .card_desc{
+    background-color: $primary-white;
+  }
+  .border_left{
+    border-left: 2px solid $accent-red;
+  }
+  .title_name_card, .title_author_card{
+    color: $primary-black;
+  }
+  .title_year_card, .title_local_card{
+    color: $accent-red;
+  }
+  .placeholder_title{
+    color: $primary-dark-gray;
+  }
+  body{
+    background-color: $primary-white;
+  }
+}
+
+.list_container{
+  width: 100%;
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(185px, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.wrapper {
+  overflow: hidden; 
+  position: relative;
+}
+.loading_spinner{
+  width: 100%;
+  height: 100%;
+  background-color: $secondary-gray;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  -webkit-transform: scale(1.1,1.1); 
+  transform: scale(1.1,1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card_desc{
+  position: absolute;
+  z-index: 5;
+  width: 75%;
+  height: 82px;
+  background-color: $primary-black;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.border_left{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+.info_one, .info_two {
+  width: 90%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  margin-left: 12px;
+}
+
+.info_two {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.wrapper:hover .info_one {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.wrapper:hover .info_two {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.title_name_card,
+.title_author_card {
+  font-family: $font-CormorantSC;
+  font-size: 12px;
+  font-weight: $font-medium;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.small_font {
+  font-size: 11px; 
+}
+
+.title_year_card,
+.title_local_card {
+  font-family: $font-inter;
+  font-weight: $font-bold;
+  font-size: 8px;
+  margin-top: 4px;
+}
+
+@media (min-width: 360px) {
+  .list_container{
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(260px, auto);
+  }
+  .title_name_card,
+  .title_author_card {
+    font-size: 12px;
+  }
+  .title_year_card,
+  .title_local_card {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+  .info_one, .info_two {
+    margin-left: 12px;
+  }
+  .small_font {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 540px) {
+  .list_container{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(200px, auto);
+  }
+  .title_name_card,
+  .title_author_card {
+    font-size: 16px;
+  }
+  .title_year_card,
+  .title_local_card {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .info_one, .info_two {
+    margin-left: 12px;
+  }
+  .small_font {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  .list_container{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(220px, 260px);
+  }
+  .title_name_card,
+  .title_author_card {
+    font-size: 16px;
+  }
+  .title_year_card,
+  .title_local_card {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .info_one, .info_two {
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .list_container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(220px, 260px);
+  }
+  .title_name_card,
+  .title_author_card {
+    font-size: 14px;
+  }
+  .title_year_card,
+  .title_local_card {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+  .info_one, .info_two {
+    margin-left: 20px;
+  }
+  .small_font {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .list_container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(220px, 260px);
+  }
+  .title_name_card,
+  .title_author_card {
+    font-size: 16px;
+  }
+  .title_year_card,
+  .title_local_card {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .info_one, .info_two {
+    margin-left: 20px;
+  }
+  .small_font {
+    font-size: 14px;
+  }
+}
+
+.placeholder_title{
+  font-family: $font-inter;
+  font-weight: $font-medium;
+  font-size: 16px;
+  margin-top: 60px;
+}
+
+.placeholder_subtitle{
+  font-family: $font-inter;
+  font-weight: $font-light;
+  font-size: 14px;
+  color: $secondary-gray;
+  margin-top: 12px;
+}

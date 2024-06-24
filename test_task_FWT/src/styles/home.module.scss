@@ -1,0 +1,80 @@
+@import "./main.module.scss";
+
+.home_body {
+  width: 100%;
+  font-family: $font-inter;
+}
+
+.home_container {
+  min-width: 280px;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.search {
+  width: 100%;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 0px;
+  margin-left: auto;
+  margin-top: 27px;
+}
+
+input[name="search"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+  font-weight: $font-light;
+  margin-left: 12px;
+  padding: 0px;
+  margin-right: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .home_container {
+    width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search {
+    width: 280px;
+    height: 36px;
+    margin-top: 44px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home_container {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search {
+    width: 336px;
+    height: 36px;
+    margin-top: 44px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .home_container {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search {
+    width: 336px;
+    margin-top: 44px;
+  }
+}
