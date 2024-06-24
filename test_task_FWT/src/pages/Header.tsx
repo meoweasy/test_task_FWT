@@ -21,7 +21,10 @@ function Header() {
     >
       <div className={style.container}>
         <div className={style.logo_FWT}>
-          <img src={btn === 1 ? '/logoB.svg' : '/logoW.svg'} alt="" />
+          <img
+            src={btn === 1 ? './assets/logoB.svg' : './assets/logoW.svg'}
+            alt=""
+          />
         </div>
         <button
           type="button"
@@ -30,7 +33,12 @@ function Header() {
           onClick={handleButtonClick}
           style={{ backgroundColor: theme === 'dark' ? '#1A1818' : '#FCFCFC' }}
         >
-          <img src={btn === 1 ? '/dark_icon.svg' : '/light_icon.svg'} alt="" />
+          <img
+            src={
+              btn === 1 ? './assets/dark_icon.svg' : './assets/light_icon.svg'
+            }
+            alt=""
+          />
         </button>
       </div>
     </div>

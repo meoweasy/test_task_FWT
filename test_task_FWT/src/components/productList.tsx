@@ -200,7 +200,9 @@ function ProductList() {
             >
               <img
                 src={
-                  theme === 'dark' ? '/arrow_icon_W.svg' : '/arrow_icon_B.svg'
+                  theme === 'dark'
+                    ? './assets/arrow_icon_W.svg'
+                    : './assets/arrow_icon_B.svg'
                 }
                 alt=""
                 className={pagStyle.arrowIcon}
@@ -224,7 +226,9 @@ function ProductList() {
             >
               <img
                 src={
-                  theme === 'dark' ? '/arrow_icon_W.svg' : '/arrow_icon_B.svg'
+                  theme === 'dark'
+                    ? './assets/arrow_icon_W.svg'
+                    : './assets/arrow_icon_B.svg'
                 }
                 alt=""
                 className={pagStyle.arrowIcon}

@@ -2,8 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import styleHome from '../styles/home.module.scss';
 import { RootState } from '../app/store';
-import ProductList from '../components/productList';
 import { setSearchQuery } from '../features/searchSlice';
+import ProductList from '../components/ProductList';
 
 function Home() {
   const theme = useSelector((state: RootState) => state.theme);
@@ -35,7 +35,9 @@ function Home() {
           style={{ backgroundColor: theme === 'dark' ? '#1A1818' : '#FCFCFC' }}
         >
           <img
-            src={theme === 'dark' ? '/searchW.svg' : '/searchB.svg'}
+            src={
+              theme === 'dark' ? './assets/searchW.svg' : './assets/searchB.svg'
+            }
             alt=""
             style={{ marginLeft: '16px' }}
           />

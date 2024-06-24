@@ -1,7 +1,7 @@
 {
   "homepage": "https://meoweasy.github.io/test_task_FWT/",
   "name": "test-task-fwt",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
