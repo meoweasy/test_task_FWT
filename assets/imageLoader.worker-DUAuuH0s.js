@@ -1,0 +1,1 @@
+(function(){"use strict";const n=self,o=async s=>{const t=await(await fetch(s)).blob(),e=URL.createObjectURL(t);return{imageUrl:s,blobUrl:e}};n.addEventListener("message",async s=>{const{src:a}=s.data,t=await o(a);await new Promise(e=>{setTimeout(e,1e3)}),postMessage({result:t})})})();
